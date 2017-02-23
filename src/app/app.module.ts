@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
 import { MaterialModule } from '@angular/material';
+import { SharedModule } from './shared/shared.module';
 import 'hammerjs';
+import { CoreModule } from './core/core.module';
 
 const routes: Routes = [];
 
@@ -15,13 +17,15 @@ const routes: Routes = [];
   ],
   imports: [
     BrowserModule,
+    CoreModule,
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    SharedModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ AppComponent ]
 })
 export class AppModule {
 }
