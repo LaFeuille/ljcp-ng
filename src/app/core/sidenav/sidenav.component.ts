@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MdSidenav, MdSidenavToggleResult } from '@angular/material';
 
 @Component({
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.css']
+  styleUrls: [ './sidenav.component.css' ]
 })
 export class SidenavComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild(MdSidenav) sidenav: MdSidenav;
+
+  constructor() {
+  }
 
   ngOnInit() {
+  }
+
+  open(): Promise<MdSidenavToggleResult> {
+    return this.sidenav.open();
   }
 
 }

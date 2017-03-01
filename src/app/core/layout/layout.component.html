@@ -1,5 +1,5 @@
 <md-sidenav-container>
-  <app-sidenav></app-sidenav>
-  <app-toolbar></app-toolbar>
+  <app-sidenav #sidenav></app-sidenav>
+  <app-toolbar (openSidenav)="sidenav.open()"></app-toolbar>
   <router-outlet></router-outlet>
 </md-sidenav-container>

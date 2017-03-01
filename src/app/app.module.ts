@@ -20,7 +20,7 @@ const routes: Routes = [];
     CoreModule,
     FormsModule,
     HttpModule,
-    MaterialModule.forRoot(),
+    MaterialModule,
     RouterModule.forRoot(routes),
     SharedModule
   ],
