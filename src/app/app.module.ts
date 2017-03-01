@@ -4,10 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { Routes, RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
 import { SharedModule } from './shared/shared.module';
-import 'hammerjs';
 import { CoreModule } from './core/core.module';
+import { MaterialModule } from '@angular/material';
+import 'hammerjs';
 
 const routes: Routes = [];
 
