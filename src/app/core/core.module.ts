@@ -9,7 +9,13 @@ import { MaterialModule } from '@angular/material';
 const routes: Routes = [
   {
     path: '',
-    component: LayoutComponent
+    component: LayoutComponent,
+    children: [
+      {
+        path: 'status',
+        loadChildren: '../status/status.module#StatusModule'
+      }
+    ]
   }
 ];
 
