@@ -1,15 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
+import { HealthService } from '../health.service';
+import { Health } from '../health';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'app-index',
   templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  styleUrls: [ './index.component.css' ]
 })
-export class IndexComponent implements OnInit {
+export class IndexComponent implements OnInit, OnDestroy {
 
-  constructor() { }
+  health: Health;
+
+  private subs: Subscription[] = [];
+
+  constructor(private service: HealthService) {
+  }
 
   ngOnInit() {
+    this.subs.push(
+      this.service.data$()
+        .subscribe(health => this.health = health)
+    );
+  }
+
+  ngOnDestroy() {
+    this.subs.forEach(sub => sub.unsubscribe());
   }
 
 }

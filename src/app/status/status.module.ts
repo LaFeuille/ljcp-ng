@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { StatusService } from './status.service';
+import { HealthService } from './health.service';
 import { IndexComponent } from './index/index.component';
 
 const routes: Routes = [
@@ -22,7 +22,7 @@ const routes: Routes = [
     IndexComponent
   ],
   providers: [
-    StatusService
+    HealthService
   ]
 })
 export class StatusModule {
