@@ -14,6 +14,11 @@ const routes: Routes = [
       {
         path: 'status',
         loadChildren: '../status/status.module#StatusModule'
+      },
+      {
+        path: '',
+        redirectTo: 'status',
+        pathMatch: 'full'
       }
     ]
   }
