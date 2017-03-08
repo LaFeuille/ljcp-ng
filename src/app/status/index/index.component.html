@@ -1,3 +1,5 @@
 <h2>
-  Status is {{health?.status}}
+  Status is
+  <md-progress-spinner *ngIf="!health"></md-progress-spinner>
+  {{health?.status}}
 </h2>

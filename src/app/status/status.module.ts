@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HealthService } from './health.service';
 import { IndexComponent } from './index/index.component';
+import { MaterialModule } from '@angular/material';
 
 const routes: Routes = [
   {
@@ -16,6 +17,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     HttpModule,
+    MaterialModule,
     RouterModule.forChild(routes)
   ],
   declarations: [
