@@ -25,7 +25,7 @@ const routes: Routes = [];
     SharedModule
   ],
   providers: [],
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }
