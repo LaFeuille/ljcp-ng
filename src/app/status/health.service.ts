@@ -1,9 +1,9 @@
-import { Injectable } from '@angular/core';
-import { Http } from '@angular/http';
-import { Observable } from 'rxjs/Observable';
-import { environment } from '../../environments/environment';
+import {Injectable} from '@angular/core';
+import {Http} from '@angular/http';
+import {Observable} from 'rxjs/Observable';
+import {environment} from '../../environments/environment';
 import 'rxjs/add/operator/map';
-import { Health } from './health';
+import {Health} from './health';
 
 @Injectable()
 export class HealthService {

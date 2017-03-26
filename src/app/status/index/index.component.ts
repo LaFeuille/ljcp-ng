@@ -1,11 +1,11 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HealthService } from '../health.service';
-import { Health } from '../health';
-import { Subscription } from 'rxjs/Subscription';
+import {Component, OnDestroy, OnInit} from '@angular/core';
+import {HealthService} from '../health.service';
+import {Health} from '../health';
+import {Subscription} from 'rxjs/Subscription';
 
 @Component({
   templateUrl: './index.component.html',
-  styleUrls: [ './index.component.css' ]
+  styleUrls: ['./index.component.css']
 })
 export class IndexComponent implements OnInit, OnDestroy {
 

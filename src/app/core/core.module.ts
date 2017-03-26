@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { SidenavComponent } from './sidenav/sidenav.component';
-import { LayoutComponent } from './layout/layout.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
-import { Routes, RouterModule } from '@angular/router';
-import { MaterialModule } from '@angular/material';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
+import {SidenavComponent} from './sidenav/sidenav.component';
+import {LayoutComponent} from './layout/layout.component';
+import {ToolbarComponent} from './toolbar/toolbar.component';
+import {RouterModule, Routes} from '@angular/router';
+import {MaterialModule} from '@angular/material';
 
 const routes: Routes = [
   {
