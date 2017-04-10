@@ -1,5 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/core/theming/prebuilt/pink-bluegrey.css';
+@import '~@angular/material/prebuilt-themes/pink-bluegrey.css';
 @import '~font-awesome/css/font-awesome.css';
 
 html, body, material-app, md-sidenav-container, .my-content {
