@@ -17,7 +17,7 @@ describe('LayoutComponent', () => {
         ToolbarComponent
       ],
       imports: [
-        MaterialModule.forRoot(),
+        MaterialModule,
         RouterTestingModule
       ]
     })

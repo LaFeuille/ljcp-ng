@@ -10,7 +10,7 @@ describe('AppComponent', () => {
         AppComponent
       ],
       imports: [
-        MaterialModule.forRoot(),
+        MaterialModule,
         RouterTestingModule
       ]
     }).compileComponents();

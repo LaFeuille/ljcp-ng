@@ -7,6 +7,8 @@
 
 # dependencies
 /node_modules
+yarn.lock
+yarn-error.log
 
 # IDEs and editors
 /.idea
@@ -33,7 +35,6 @@
 npm-debug.log
 testem.log
 /typings
-yarn.lock
 
 # e2e
 /e2e/*.js

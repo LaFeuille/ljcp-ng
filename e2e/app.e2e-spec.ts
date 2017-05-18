@@ -1,6 +1,6 @@
 import { LjcpPage } from './app.po';
 
-describe('ljcp App', function() {
+describe('ljcp App', () => {
   let page: LjcpPage;
 
   beforeEach(() => {

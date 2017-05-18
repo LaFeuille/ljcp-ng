@@ -11,7 +11,7 @@ describe('SidenavComponent', () => {
     TestBed.configureTestingModule({
       declarations: [SidenavComponent],
       imports: [
-        MaterialModule.forRoot(),
+        MaterialModule,
         RouterTestingModule
       ]
     })
