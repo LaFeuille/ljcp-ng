@@ -3,17 +3,18 @@ import { Http } from '@angular/http';
 import 'rxjs/add/operator/map';
 import { Observable } from 'rxjs/Observable';
 import { environment } from '../../environments/environment';
-import { Health } from './health';
+import { Page } from '../shared/page';
 
 @Injectable()
-export class HealthService {
+export class EventsService {
 
   constructor(private http: Http) {
   }
 
-  data$(): Observable<Health> {
-    return this.http.get(`${environment.apiEndpoint}/monitoring/health`)
-      .map(res => res.json() as Health);
+  findAll(): Observable<Page<any>> {
+    return this.http.get(`${environment.apiEndpoint}/events`)
+      .map(res => res.json())
+      .map(json => new Page<any>(json._embedded.events));
   }
 
 }

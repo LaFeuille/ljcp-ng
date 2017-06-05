@@ -1,7 +1,7 @@
-import {Component, OnDestroy, OnInit} from '@angular/core';
-import {HealthService} from '../health.service';
-import {Health} from '../health';
-import {Subscription} from 'rxjs/Subscription';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs/Subscription';
+import { Health } from '../health';
+import { HealthService } from '../health.service';
 
 @Component({
   templateUrl: './index.component.html',

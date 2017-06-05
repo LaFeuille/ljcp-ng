@@ -1,10 +1,10 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {SidenavComponent} from './sidenav/sidenav.component';
-import {LayoutComponent} from './layout/layout.component';
-import {ToolbarComponent} from './toolbar/toolbar.component';
-import {RouterModule, Routes} from '@angular/router';
-import {MaterialModule} from '@angular/material';
+import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
+import { MaterialModule } from '@angular/material';
+import { RouterModule, Routes } from '@angular/router';
+import { LayoutComponent } from './layout/layout.component';
+import { SidenavComponent } from './sidenav/sidenav.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 const routes: Routes = [
   {
@@ -12,12 +12,16 @@ const routes: Routes = [
     component: LayoutComponent,
     children: [
       {
+        path: 'events',
+        loadChildren: '../events/events.module#EventsModule'
+      },
+      {
         path: 'status',
         loadChildren: '../status/status.module#StatusModule'
       },
       {
         path: '',
-        redirectTo: 'status',
+        redirectTo: 'events',
         pathMatch: 'full'
       }
     ]

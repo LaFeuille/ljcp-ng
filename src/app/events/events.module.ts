@@ -1,31 +1,41 @@
+import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
-import { HealthService } from './health.service';
+import { CreateComponent } from './create/create.component';
+import { EventsService } from './events.service';
 import { IndexComponent } from './index/index.component';
+import { ListComponent } from './list/list.component';
 
 const routes: Routes = [
   {
     path: '',
     component: IndexComponent
+  },
+  {
+    path: 'new',
+    component: CreateComponent
   }
 ];
 
 @NgModule({
   imports: [
+    CommonModule,
     HttpModule,
     MaterialModule,
     RouterModule.forChild(routes),
     SharedModule
   ],
   declarations: [
-    IndexComponent
+    CreateComponent,
+    IndexComponent,
+    ListComponent
   ],
   providers: [
-    HealthService
+    EventsService
   ]
 })
-export class StatusModule {
+export class EventsModule {
 }
