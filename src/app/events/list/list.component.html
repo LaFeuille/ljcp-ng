@@ -1,5 +1,13 @@
-<ul>
-  <li *ngFor="let event of events.content">
-    {{event}}
-  </li>
-</ul>
+<md-card *ngFor="let event of events.content">
+  <md-card-header>
+    <md-card-title>
+      {{event.title}}
+    </md-card-title>
+    <md-card-subtitle>
+      {{event.startDate}}
+    </md-card-subtitle>
+  </md-card-header>
+  <md-card-content>
+    {{event.description}}
+  </md-card-content>
+</md-card>

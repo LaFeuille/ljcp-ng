@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { EventsService } from '../events.service';
 
 @Component({
   selector: 'app-create',
@@ -7,9 +9,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateComponent implements OnInit {
 
-  constructor() { }
+  createForm: FormGroup;
+
+  constructor(private fb: FormBuilder, private service: EventsService) {
+  }
 
   ngOnInit() {
+    this.createForm = this.fb.group({
+      title: ['', Validators.required, Validators.minLength(10)],
+      startDate: ['', Validators.required],
+      description: ''
+    });
+  }
+
+  onSubmit() {
+    this.service.create(this.createForm.value);
   }
 
 }
