@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { MaterialModule } from '@angular/material';
+import { MatProgressSpinnerModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
 import { HealthService } from './health.service';
@@ -16,7 +16,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     HttpModule,
-    MaterialModule,
+    MatProgressSpinnerModule,
     RouterModule.forChild(routes),
     SharedModule
   ],

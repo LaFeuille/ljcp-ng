@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MaterialModule } from '@angular/material';
 import { RouterTestingModule } from '@angular/router/testing';
 import { SidenavComponent } from '../sidenav/sidenav.component';
 import { ToolbarComponent } from '../toolbar/toolbar.component';
@@ -17,7 +16,6 @@ describe('LayoutComponent', () => {
         ToolbarComponent
       ],
       imports: [
-        MaterialModule,
         RouterTestingModule
       ]
     })

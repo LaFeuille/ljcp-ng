@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
-import { MaterialModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { LayoutComponent } from './layout/layout.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
@@ -31,7 +31,11 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    MaterialModule,
+    MatIconModule,
+    MatButtonModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule,
     RouterModule.forChild(routes)
   ],
   declarations: [

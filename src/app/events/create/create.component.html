@@ -1,13 +1,13 @@
 <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
-  <md-input-container>
-    <input mdInput placeholder="Title" formControlName="title">
-  </md-input-container>
-  <md-input-container>
-    <input mdInput placeholder="Start Date" formControlName="startDate" type="date">
-  </md-input-container>
-  <md-input-container>
-    <textarea mdInput placeholder="Description" formControlName="description"></textarea>
-  </md-input-container>
+  <mat-form-field>
+    <input matInput placeholder="Title" formControlName="title">
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Start Date" formControlName="startDate" type="date">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput placeholder="Description" formControlName="description"></textarea>
+  </mat-form-field>
   <button type="submit" [disabled]="createForm.pristine">
     Save
   </button>
