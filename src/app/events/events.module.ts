@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { MatCardModule, MatFormFieldModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -24,7 +24,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    HttpModule,
+    HttpClientModule,
     MatCardModule,
     MatFormFieldModule,
     ReactiveFormsModule,

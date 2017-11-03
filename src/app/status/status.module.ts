@@ -1,5 +1,5 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
-import { HttpModule } from '@angular/http';
 import { MatProgressSpinnerModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
 import { SharedModule } from '../shared/shared.module';
@@ -15,7 +15,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    HttpModule,
+    HttpClientModule,
     MatProgressSpinnerModule,
     RouterModule.forChild(routes),
     SharedModule
