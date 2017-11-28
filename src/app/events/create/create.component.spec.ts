@@ -1,4 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule, MatInputModule } from '@angular/material';
+import { EventsService } from '../events.service';
 
 import { CreateComponent } from './create.component';
 
@@ -8,9 +11,15 @@ describe('CreateComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CreateComponent ]
+      declarations: [CreateComponent],
+      imports: [
+        MatFormFieldModule,
+        MatInputModule,
+        ReactiveFormsModule
+      ],
+      providers: [EventsService]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

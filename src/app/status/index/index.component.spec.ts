@@ -1,4 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatProgressSpinnerModule } from '@angular/material';
+import { HealthService } from '../health.service';
 
 import { IndexComponent } from './index.component';
 
@@ -8,7 +10,11 @@ describe('IndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [IndexComponent]
+      declarations: [IndexComponent],
+      imports: [
+        MatProgressSpinnerModule
+      ],
+      providers: [HealthService]
     })
       .compileComponents();
   }));
