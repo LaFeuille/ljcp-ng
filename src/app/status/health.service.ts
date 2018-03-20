@@ -12,7 +12,7 @@ export class HealthService {
   }
 
   data$(): Observable<Health> {
-    return this.http.get(`${environment.apiEndpoint}/monitoring/health`)
+    return this.http.get(`${environment.apiEndpoint}/actuator/health`)
       .map(res => res as Health);
   }
 
