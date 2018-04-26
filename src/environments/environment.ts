@@ -4,6 +4,6 @@
 // The list of which env maps to which file can be found in `.angular-cli.json`.
 
 export const environment = {
-  apiEndpoint: 'https://lafeuille-ljcp-api.herokuapp.com',
+  apiEndpoint: 'https://lafeuille-ljcp-api-dev.herokuapp.com',
   production: false
 };
