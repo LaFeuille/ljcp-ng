@@ -1,0 +1,45 @@
+{
+  "configVersion": 1,
+  "index": "/ljcp/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "urls": [
+        "/ljcp/favicon.ico",
+        "/ljcp/index.html",
+        "/ljcp/0.776ac36ef4523288979d.chunk.js",
+        "/ljcp/1.1b561e3991a6d5092752.chunk.js",
+        "/ljcp/2.7a43414db22765bfce53.chunk.js",
+        "/ljcp/inline.2f2473fbeac7ff0797eb.bundle.js",
+        "/ljcp/main.30c1879bc2b921bfdcb8.bundle.js",
+        "/ljcp/polyfills.56b6c2798ce24e230c3f.bundle.js",
+        "/ljcp/styles.750c83d359dcafd0c68e.bundle.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "urls": [
+        "/ljcp/assets/.npmignore"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/ljcp/0.776ac36ef4523288979d.chunk.js": "8ed991a63a4f7bd251358e0c7dc1ad675b6519f2",
+    "/ljcp/assets/.npmignore": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/ljcp/1.1b561e3991a6d5092752.chunk.js": "8dedc70a4c168345e85cbac7e12d94b9737957ba",
+    "/ljcp/2.7a43414db22765bfce53.chunk.js": "4739ff15c45830636d4d1c255cd2c080b1867a35",
+    "/ljcp/inline.2f2473fbeac7ff0797eb.bundle.js": "f5904caecde55aed7cfadebe218f5342022d5ceb",
+    "/ljcp/main.30c1879bc2b921bfdcb8.bundle.js": "4d4e689c291fa54b1cf47adfa94c8426a67f4e4e",
+    "/ljcp/polyfills.56b6c2798ce24e230c3f.bundle.js": "56fc582e6008a9ce75f3c197fff72655a4bec048",
+    "/ljcp/styles.750c83d359dcafd0c68e.bundle.css": "9c774977e71c8541e17333a1bc635ea28df98140",
+    "/ljcp/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/ljcp/index.html": "37990bf6106aa1f1ee600f5857f93ed5646ccf13"
+  }
+}
