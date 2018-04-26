@@ -1,21 +1,21 @@
 {
   "configVersion": 1,
-  "index": "C:/Program Files/Git/ljcp/index.html",
+  "index": "/ljcp-ng/index.html",
   "assetGroups": [
     {
       "name": "app",
       "installMode": "prefetch",
       "updateMode": "prefetch",
       "urls": [
-        "C:/Program Files/Git/ljcp/favicon.ico",
-        "C:/Program Files/Git/ljcp/index.html",
-        "C:/Program Files/Git/ljcp/0.776ac36ef4523288979d.chunk.js",
-        "C:/Program Files/Git/ljcp/1.1b561e3991a6d5092752.chunk.js",
-        "C:/Program Files/Git/ljcp/2.7a43414db22765bfce53.chunk.js",
-        "C:/Program Files/Git/ljcp/inline.2f2473fbeac7ff0797eb.bundle.js",
-        "C:/Program Files/Git/ljcp/main.30c1879bc2b921bfdcb8.bundle.js",
-        "C:/Program Files/Git/ljcp/polyfills.56b6c2798ce24e230c3f.bundle.js",
-        "C:/Program Files/Git/ljcp/styles.750c83d359dcafd0c68e.bundle.css"
+        "/ljcp-ng/favicon.ico",
+        "/ljcp-ng/index.html",
+        "/ljcp-ng/0.776ac36ef4523288979d.chunk.js",
+        "/ljcp-ng/1.1b561e3991a6d5092752.chunk.js",
+        "/ljcp-ng/2.7a43414db22765bfce53.chunk.js",
+        "/ljcp-ng/inline.2f2473fbeac7ff0797eb.bundle.js",
+        "/ljcp-ng/main.30c1879bc2b921bfdcb8.bundle.js",
+        "/ljcp-ng/polyfills.56b6c2798ce24e230c3f.bundle.js",
+        "/ljcp-ng/styles.750c83d359dcafd0c68e.bundle.css"
       ],
       "patterns": []
     },
@@ -24,22 +24,22 @@
       "installMode": "lazy",
       "updateMode": "prefetch",
       "urls": [
-        "C:/Program Files/Git/ljcp/assets/.npmignore"
+        "/ljcp-ng/assets/.npmignore"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "C:/Program Files/Git/ljcp/0.776ac36ef4523288979d.chunk.js": "8ed991a63a4f7bd251358e0c7dc1ad675b6519f2",
-    "C:/Program Files/Git/ljcp/assets/.npmignore": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
-    "C:/Program Files/Git/ljcp/1.1b561e3991a6d5092752.chunk.js": "8dedc70a4c168345e85cbac7e12d94b9737957ba",
-    "C:/Program Files/Git/ljcp/2.7a43414db22765bfce53.chunk.js": "4739ff15c45830636d4d1c255cd2c080b1867a35",
-    "C:/Program Files/Git/ljcp/inline.2f2473fbeac7ff0797eb.bundle.js": "f5904caecde55aed7cfadebe218f5342022d5ceb",
-    "C:/Program Files/Git/ljcp/main.30c1879bc2b921bfdcb8.bundle.js": "4d4e689c291fa54b1cf47adfa94c8426a67f4e4e",
-    "C:/Program Files/Git/ljcp/polyfills.56b6c2798ce24e230c3f.bundle.js": "56fc582e6008a9ce75f3c197fff72655a4bec048",
-    "C:/Program Files/Git/ljcp/styles.750c83d359dcafd0c68e.bundle.css": "9c774977e71c8541e17333a1bc635ea28df98140",
-    "C:/Program Files/Git/ljcp/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
-    "C:/Program Files/Git/ljcp/index.html": "5e24d31b1ab4b97bb8a386728772186f6cb42ab2"
+    "/ljcp-ng/0.776ac36ef4523288979d.chunk.js": "8ed991a63a4f7bd251358e0c7dc1ad675b6519f2",
+    "/ljcp-ng/assets/.npmignore": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+    "/ljcp-ng/1.1b561e3991a6d5092752.chunk.js": "8dedc70a4c168345e85cbac7e12d94b9737957ba",
+    "/ljcp-ng/2.7a43414db22765bfce53.chunk.js": "4739ff15c45830636d4d1c255cd2c080b1867a35",
+    "/ljcp-ng/inline.2f2473fbeac7ff0797eb.bundle.js": "f5904caecde55aed7cfadebe218f5342022d5ceb",
+    "/ljcp-ng/main.30c1879bc2b921bfdcb8.bundle.js": "4d4e689c291fa54b1cf47adfa94c8426a67f4e4e",
+    "/ljcp-ng/polyfills.56b6c2798ce24e230c3f.bundle.js": "56fc582e6008a9ce75f3c197fff72655a4bec048",
+    "/ljcp-ng/styles.750c83d359dcafd0c68e.bundle.css": "9c774977e71c8541e17333a1bc635ea28df98140",
+    "/ljcp-ng/favicon.ico": "84161b857f5c547e3699ddfbffc6d8d737542e01",
+    "/ljcp-ng/index.html": "ec4e5b0ea4ef4b05696dc924e9eb88d6eff6e2a2"
   }
 }
