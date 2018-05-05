@@ -1,7 +1,9 @@
+
+import {map} from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-import { Observable } from 'rxjs/Observable';
+
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Health } from './health';
 
@@ -12,8 +14,8 @@ export class HealthService {
   }
 
   data$(): Observable<Health> {
-    return this.http.get(`${environment.apiEndpoint}/actuator/health`)
-      .map(res => res as Health);
+    return this.http.get(`${environment.apiEndpoint}/actuator/health`).pipe(
+      map(res => res as Health));
   }
 
 }

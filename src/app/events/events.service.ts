@@ -1,8 +1,10 @@
+
+import {map} from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/toPromise';
-import { Observable } from 'rxjs/Observable';
+
+
+import { Observable } from 'rxjs';
 import { environment } from '../../environments/environment';
 import { Page } from '../shared/page';
 import { Event } from './event';
@@ -19,8 +21,8 @@ export class EventsService {
   }
 
   findAll(): Observable<Page<Event>> {
-    return this.http.get(`${environment.apiEndpoint}/events`)
-      .map(res => new Page<any>((res as any)._embedded.events));
+    return this.http.get(`${environment.apiEndpoint}/events`).pipe(
+      map(res => new Page<any>((res as any)._embedded.events)));
   }
 
 }
