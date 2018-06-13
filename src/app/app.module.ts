@@ -24,7 +24,7 @@ const routes: Routes = [];
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production}),
+    ServiceWorkerModule.register('./ngsw-worker.js', {enabled: environment.production}),
     SharedModule
   ],
   providers: [],
