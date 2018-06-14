@@ -36,7 +36,8 @@ module.exports = function (config) {
   });
   if (process.env.TRAVIS) {
     config.set({
-      browsers: ['Chrome_Travis_CI']
+      browsers: ['Chrome_Travis_CI'],
+      singleRun: true
     });
   }
 };
