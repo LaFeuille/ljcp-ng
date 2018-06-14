@@ -1,28 +1,29 @@
-
-import {map} from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { flatMap, map } from 'rxjs/operators';
+import { ConfigService } from '../core/config.service';
 import { Page } from '../shared/page';
 import { Event } from './event';
 
 @Injectable()
 export class EventsService {
 
-  constructor(private http: HttpClient) {
+  constructor(private config: ConfigService, private http: HttpClient) {
   }
 
   create(request: any): Promise<any> {
-    return this.http.post(`${environment.apiEndpoint}/events`, request)
-      .toPromise();
+    return this.config.data.pipe(
+      flatMap(config => this.http.post(`${config.apiEndpoint}/events`, request))
+    ).toPromise();
   }
 
   findAll(): Observable<Page<Event>> {
-    return this.http.get(`${environment.apiEndpoint}/events`).pipe(
-      map(res => new Page<any>((res as any)._embedded.events)));
+    return this.config.data.pipe(
+      flatMap(config => this.http.get(`${config.apiEndpoint}/events`)),
+      map(res => new Page<any>((res as any)._embedded.events))
+    );
   }
 
 }

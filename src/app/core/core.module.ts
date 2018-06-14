@@ -1,7 +1,10 @@
 import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
+import { HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { MatButtonModule, MatIconModule, MatMenuModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { RouterModule, Routes } from '@angular/router';
+import { CredentialsInterceptor } from './credentials-interceptor.service';
+import { HttpErrorInterceptor } from './http-error-interceptor.service';
 import { LayoutComponent } from './layout/layout.component';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { ToolbarComponent } from './toolbar/toolbar.component';
@@ -45,4 +48,21 @@ const routes: Routes = [
   ]
 })
 export class CoreModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: CoreModule,
+      providers: [
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: CredentialsInterceptor,
+          multi: true
+        },
+        {
+          provide: HTTP_INTERCEPTORS,
+          useClass: HttpErrorInterceptor,
+          multi: true
+        }
+      ]
+    };
+  }
 }

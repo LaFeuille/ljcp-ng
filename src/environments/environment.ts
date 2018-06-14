@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  apiEndpoint: 'https://lafeuille-ljcp-api-dev.herokuapp.com',
-  production: false
+  production: false,
+  configFile: 'environment.dev.json'
 };
 
 /*

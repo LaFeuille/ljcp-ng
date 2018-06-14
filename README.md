@@ -28,4 +28,4 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Deploy on Github Pages
 
-Run `ng build --prod --base-href "/ljcp-ng/" --output-path dist` and then `npx ngh`
+Run `ng build --prod`, add `dist/ljcp-ng/config/environment.json` and then `npx firebase deploy`

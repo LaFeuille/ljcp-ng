@@ -1,21 +1,22 @@
-
-import {map} from 'rxjs/operators';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { environment } from '../../environments/environment';
+import { flatMap, map } from 'rxjs/operators';
+import { ConfigService } from '../core/config.service';
 import { Health } from './health';
 
 @Injectable()
 export class HealthService {
 
-  constructor(private http: HttpClient) {
+  constructor(private config: ConfigService, private http: HttpClient) {
   }
 
   data$(): Observable<Health> {
-    return this.http.get(`${environment.apiEndpoint}/actuator/health`).pipe(
-      map(res => res as Health));
+    return this.config.data.pipe(
+      flatMap(config => this.http.get(`${config.apiEndpoint}/actuator/health`)),
+      map(res => res as Health)
+    );
   }
 
 }
