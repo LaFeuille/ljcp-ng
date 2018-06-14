@@ -35,6 +35,10 @@ module.exports = function (config) {
     }
   });
   if (process.env.TRAVIS) {
-    config.browsers = ['Chrome_Travis_CI'];
+    config.set({
+      autoWatch: false,
+      browsers: ['Chrome_Travis_CI']
+    });
+
   }
 };
