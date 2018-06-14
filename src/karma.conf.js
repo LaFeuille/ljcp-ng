@@ -29,7 +29,7 @@ module.exports = function (config) {
     singleRun: false,
     customLaunchers: {
       Chrome_Travis_CI: {
-        base: 'Chrome',
+        base: 'ChromeHeadless',
         flags: ['--no-sandbox']
       }
     }
