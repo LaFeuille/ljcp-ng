@@ -1,15 +1,17 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { inject, TestBed } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { CredentialsInterceptor } from './credentials-interceptor.service';
 
 describe('CredentialsInterceptor', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [
+      imports: [
         HttpClientTestingModule,
-        CredentialsInterceptor
-      ]
+        RouterTestingModule
+      ],
+      providers: [CredentialsInterceptor]
     });
   });
 

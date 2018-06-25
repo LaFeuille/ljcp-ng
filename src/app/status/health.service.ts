@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 import { Observable } from 'rxjs';
-import { flatMap, map } from 'rxjs/operators';
+import { flatMap } from 'rxjs/operators';
 import { ConfigService } from '../core/config.service';
 import { Health } from './health';
 
@@ -14,8 +14,7 @@ export class HealthService {
 
   data$(): Observable<Health> {
     return this.config.data.pipe(
-      flatMap(config => this.http.get(`${config.apiEndpoint}/actuator/health`)),
-      map(res => res as Health)
+      flatMap(config => this.http.get<Health>(`${config.apiEndpoint}/actuator/health`))
     );
   }
 

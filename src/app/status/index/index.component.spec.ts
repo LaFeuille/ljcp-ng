@@ -1,3 +1,4 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatProgressSpinnerModule } from '@angular/material';
 import { HealthService } from '../health.service';
@@ -12,6 +13,7 @@ describe('IndexComponent', () => {
     TestBed.configureTestingModule({
       declarations: [IndexComponent],
       imports: [
+        HttpClientTestingModule,
         MatProgressSpinnerModule
       ],
       providers: [HealthService]
