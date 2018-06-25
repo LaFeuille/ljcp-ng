@@ -22,7 +22,7 @@ describe('ConfigService', () => {
       expect(config.authCallbackUrl).toEqual('');
       done();
     });
-    const req = http.expectOne('/config/environment.dev.json');
+    const req = http.expectOne('./config/environment.dev.json');
     expect(req.request.method).toEqual('GET');
     req.flush({});
     http.verify();
@@ -35,7 +35,7 @@ describe('ConfigService', () => {
       expect(config.authCallbackUrl).toEqual('http://localhost:4200/auth/callback');
       done();
     });
-    const req = http.expectOne('/config/environment.dev.json');
+    const req = http.expectOne('./config/environment.dev.json');
     expect(req.request.method).toEqual('GET');
     req.flush({
       apiEndpoint: 'https://google.com/',
