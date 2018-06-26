@@ -1,4 +1,4 @@
 export const environment = {
-  apiEndpoint: 'https://lafeuille-ljcp-api.herokuapp.com',
-  production: true
+  production: true,
+  configFile: 'environment.json'
 };

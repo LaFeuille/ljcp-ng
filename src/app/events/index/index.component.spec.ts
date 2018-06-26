@@ -1,5 +1,9 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatProgressSpinnerModule } from '@angular/material';
+import { MatCardModule, MatProgressSpinnerModule } from '@angular/material';
+import { SharedModule } from '../../shared/shared.module';
+import { EventsService } from '../events.service';
+import { ListComponent } from '../list/list.component';
 
 import { IndexComponent } from './index.component';
 
@@ -9,9 +13,18 @@ describe('IndexComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [IndexComponent],
+      declarations: [
+        IndexComponent,
+        ListComponent
+      ],
       imports: [
-        MatProgressSpinnerModule
+        HttpClientTestingModule,
+        MatCardModule,
+        MatProgressSpinnerModule,
+        SharedModule
+      ],
+      providers: [
+        EventsService
       ]
     })
       .compileComponents();
