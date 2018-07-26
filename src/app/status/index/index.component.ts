@@ -4,8 +4,7 @@ import { Health } from '../health';
 import { HealthService } from '../health.service';
 
 @Component({
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  templateUrl: './index.component.html'
 })
 export class IndexComponent implements OnInit, OnDestroy {
 

@@ -3,8 +3,7 @@ import { Page } from '../../shared/page';
 
 @Component({
   selector: 'app-events-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css']
+  templateUrl: './list.component.html'
 })
 export class ListComponent {
 

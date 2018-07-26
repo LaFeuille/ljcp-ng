@@ -4,8 +4,7 @@ import { Page } from '../../shared/page';
 import { EventsService } from '../events.service';
 
 @Component({
-  templateUrl: './index.component.html',
-  styleUrls: ['./index.component.css']
+  templateUrl: './index.component.html'
 })
 export class IndexComponent implements OnInit {
 
