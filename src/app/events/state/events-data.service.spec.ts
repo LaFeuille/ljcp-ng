@@ -1,17 +1,17 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { inject, TestBed } from '@angular/core/testing';
 
-import { EventsService } from './events.service';
+import { EventsDataService } from './events-data.service';
 
-describe('EventsService', () => {
+describe('EventsDataService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],
-      providers: [EventsService]
+      providers: [EventsDataService]
     });
   });
 
-  it('should be created', inject([EventsService], (service: EventsService) => {
+  it('should be created', inject([EventsDataService], (service: EventsDataService) => {
     expect(service).toBeTruthy();
   }));
 });

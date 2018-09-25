@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Page } from '../../shared/page';
-import { EventsService } from '../events.service';
+import { EventsDataService } from '../state/events-data.service';
 
 @Component({
   templateUrl: './index.component.html'
@@ -10,7 +10,7 @@ export class IndexComponent implements OnInit {
 
   events$: Observable<Page<any>>;
 
-  constructor(private service: EventsService) {
+  constructor(private service: EventsDataService) {
   }
 
   ngOnInit() {

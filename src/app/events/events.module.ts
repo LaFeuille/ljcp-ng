@@ -6,9 +6,9 @@ import { MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/mate
 import { SharedModule } from '../shared/shared.module';
 import { CreateComponent } from './create/create.component';
 import { EventsRoutingModule } from './events-routing.module';
-import { EventsService } from './events.service';
 import { IndexComponent } from './index/index.component';
 import { ListComponent } from './list/list.component';
+import { EventsDataService } from './state';
 
 @NgModule({
   imports: [
@@ -27,7 +27,7 @@ import { ListComponent } from './list/list.component';
     ListComponent
   ],
   providers: [
-    EventsService
+    EventsDataService
   ]
 })
 export class EventsModule {

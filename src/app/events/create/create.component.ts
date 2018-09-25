@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { EventsService } from '../events.service';
+import { EventsDataService } from '../state/events-data.service';
 
 @Component({
   selector: 'app-create',
@@ -11,7 +11,7 @@ export class CreateComponent implements OnInit {
 
   createForm: FormGroup;
 
-  constructor(private fb: FormBuilder, private service: EventsService) {
+  constructor(private fb: FormBuilder, private service: EventsDataService) {
   }
 
   ngOnInit() {
