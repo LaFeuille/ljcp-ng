@@ -1,25 +1,27 @@
 import { Injectable } from '@angular/core';
-import { ID } from '@datorama/akita';
+import { EventsDataService } from './events-data.service';
 import { EventsStore } from './events.store';
-import { HttpClient } from '@angular/common/http';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class EventsService {
 
-  constructor(private eventsStore: EventsStore,
-              private http: HttpClient) {
+  constructor(private store: EventsStore,
+              private data: EventsDataService) {
   }
 
   get() {
-    // this.http.get().subscribe((entities: ServerResponse) => {
-      // this.eventsStore.set(entities);
-    // });
-  }
-
-  add() {
-    // this.http.post().subscribe((entity: ServerResponse) => {
-      // this.eventsStore.add(entity);
-    // });
+    this.store.setLoading(true);
+    this.data.findAll().subscribe(
+      page => {
+        this.store.set(page.content);
+      },
+      error => {
+        this.store.setError(error);
+      },
+      () => {
+        this.store.setLoading(false);
+      }
+    );
   }
 
 }

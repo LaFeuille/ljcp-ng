@@ -1,23 +1,21 @@
 import { Injectable } from '@angular/core';
 import { InMemoryDbService, RequestInfo } from 'angular-in-memory-web-api';
+import { EventsGeneratorService } from './events-generator.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EventsInMemoryDbService extends InMemoryDbService {
 
+  constructor(private generator: EventsGeneratorService) {
+    super();
+  }
+
   createDb(reqInfo?: RequestInfo): {} {
     return {
       events: {
         _embedded: {
-          events: [
-            {
-              id: 1,
-              title: 'Event 1',
-              startDate: '2001-01-01',
-              description: 'Description of event 1'
-            }
-          ]
+          events: this.generator.genMany(20)
         }
       }
     };

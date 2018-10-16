@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Page } from '../../shared/page';
+import { Event } from '../state';
 
 @Component({
   selector: 'app-events-list',
@@ -8,7 +9,7 @@ import { Page } from '../../shared/page';
 export class ListComponent {
 
   @Input()
-  events: Page<any>;
+  events: Page<Event>;
 
   constructor() {
   }
