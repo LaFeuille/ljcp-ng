@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
 import { Observable } from 'rxjs';
+import { Subscription } from 'rxjs/internal/Subscription';
 import { map, shareReplay } from 'rxjs/operators';
 import { ConfigService } from '../core/config.service';
 import { AuthStore } from './auth-store.service';
@@ -12,6 +13,8 @@ import { AuthStore } from './auth-store.service';
 export class AuthService {
 
   auth0: Observable<auth0.WebAuth>;
+
+  private refreshSub: Subscription;
 
   constructor(private config: ConfigService, private router: Router, private store: AuthStore) {
     this.auth0 = this.config.data.pipe(
@@ -29,12 +32,12 @@ export class AuthService {
   }
 
   handleAuthentication(): void {
-    this.auth0.forEach(a => a.parseHash((err, authResult) => {
-      if (authResult && authResult.accessToken && authResult.idToken) {
+    this.auth0.forEach(a => a.parseHash((err, result) => {
+      if (result && result.accessToken && result.idToken) {
         this.store.store({
-          accessToken: authResult.accessToken,
-          idToken: authResult.idToken,
-          expiresAt: authResult.expiresIn * 1000 + new Date().getTime()
+          accessToken: result.accessToken,
+          idToken: result.idToken,
+          expiresAt: result.expiresIn * 1000 + new Date().getTime()
         });
         this.router.navigate(['/']);
       } else if (err) {
@@ -57,6 +60,26 @@ export class AuthService {
     this.store.clear();
     // Go back to the home route
     this.router.navigate(['/']);
+  }
+
+  renewToken() {
+    this.auth0.forEach(a => a.checkSession({}, (err, result) => {
+      if (result && result.accessToken && result.idToken) {
+        this.store.store({
+          accessToken: result.accessToken,
+          idToken: result.idToken,
+          expiresAt: result.expiresIn * 1000 + new Date().getTime()
+        });
+      } else if (err) {
+        console.log(err);
+      }
+    }));
+  }
+
+  unscheduleRenewal() {
+    if (this.refreshSub) {
+      this.refreshSub.unsubscribe();
+    }
   }
 
   get access_token(): string | null {
