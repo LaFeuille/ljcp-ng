@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatCardModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatCardModule, MatFormFieldModule, MatInputModule, MatProgressBarModule } from '@angular/material';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { environment } from '../../environments/environment';
 import { SharedModule } from '../shared/shared.module';
@@ -19,10 +19,11 @@ import { EventsDataService } from './state';
     EventsRoutingModule,
     HttpClientModule,
     environment.production ? [] :
-      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, {apiBase: ''}),
+      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, { apiBase: '' }),
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
+    MatProgressBarModule,
     ReactiveFormsModule,
     SharedModule
   ],

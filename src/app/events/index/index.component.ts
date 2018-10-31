@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Page } from '../../shared/page';
+import { Page } from '../../shared';
 import { Event, EventsDataService } from '../state';
 
 @Component({
