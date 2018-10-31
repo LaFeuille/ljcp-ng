@@ -18,7 +18,8 @@ import { EventsDataService } from './state';
     CommonModule,
     EventsRoutingModule,
     HttpClientModule,
-    environment.production ? [] : HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService),
+    environment.production ? [] :
+      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, {apiBase: ''}),
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,

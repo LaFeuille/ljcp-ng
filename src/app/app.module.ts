@@ -26,7 +26,8 @@ import { LayoutModule } from './layout/layout.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    environment.production ? [] : HttpClientInMemoryWebApiModule.forRoot(AppInMemoryDbService, {passThruUnknownUrl: true}),
+    environment.production ? [] :
+      HttpClientInMemoryWebApiModule.forRoot(AppInMemoryDbService),
     ServiceWorkerModule.register('./ngsw-worker.js', {enabled: environment.production}),
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AuthModule.forRoot(),
