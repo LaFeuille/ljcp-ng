@@ -1,9 +1,9 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatCardModule, MatProgressSpinnerModule } from '@angular/material';
+import { MatCardModule, MatProgressBarModule } from '@angular/material';
 import { SharedModule } from '../../shared/shared.module';
 import { ListComponent } from '../list/list.component';
-import { EventsDataService } from '../state/events-data.service';
+import { EventsDataService } from '../state';
 
 import { IndexComponent } from './index.component';
 
@@ -20,7 +20,7 @@ describe('IndexComponent', () => {
       imports: [
         HttpClientTestingModule,
         MatCardModule,
-        MatProgressSpinnerModule,
+        MatProgressBarModule,
         SharedModule
       ],
       providers: [
