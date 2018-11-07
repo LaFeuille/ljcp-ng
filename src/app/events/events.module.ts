@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
+import { FlexLayoutModule } from "@angular/flex-layout";
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatCardModule, MatFormFieldModule, MatInputModule, MatProgressBarModule } from '@angular/material';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
@@ -25,7 +26,8 @@ import { EventsDataService, eventsPaginatorProvider } from './state';
     MatInputModule,
     MatProgressBarModule,
     ReactiveFormsModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule
   ],
   declarations: [
     CreateComponent,
