@@ -14,6 +14,12 @@ export class EventsInMemoryDbService extends InMemoryDbService {
   createDb(reqInfo?: RequestInfo): {} {
     return {
       events: {
+        page: {
+          size: 20,
+          totalElements: 20,
+          totalPages: 1,
+          number: 0
+        },
         _embedded: {
           events: this.generator.genMany(20)
         }

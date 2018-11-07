@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Page } from '../../shared/page';
+import { PaginationResponse } from '@datorama/akita';
 import { Event } from '../state';
 
 @Component({
@@ -9,7 +9,7 @@ import { Event } from '../state';
 export class ListComponent {
 
   @Input()
-  events: Page<Event>;
+  events: PaginationResponse<Event>;
 
   constructor() {
   }

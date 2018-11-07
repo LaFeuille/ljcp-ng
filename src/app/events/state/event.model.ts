@@ -7,6 +7,6 @@ export interface Event {
   description: string;
 }
 
-export function createEvent({id = null, title = '', startDate = null, description = ''}: Partial<Event>) {
-  return {id, title, startDate, description} as Event;
+export function createEvent({id = null, title = '', startDate = null, description = ''}: Partial<Event>): Event {
+  return {id, title, startDate, description};
 }

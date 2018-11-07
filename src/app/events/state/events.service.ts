@@ -13,7 +13,7 @@ export class EventsService {
     this.store.setLoading(true);
     this.data.findAll().subscribe(
       page => {
-        this.store.set(page.content);
+        this.store.set(page.data);
       },
       error => {
         this.store.setError(error);

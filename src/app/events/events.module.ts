@@ -11,7 +11,7 @@ import { EventsInMemoryDbService } from './events-in-memory-db.service';
 import { EventsRoutingModule } from './events-routing.module';
 import { IndexComponent } from './index/index.component';
 import { ListComponent } from './list/list.component';
-import { EventsDataService } from './state';
+import { EventsDataService, eventsPaginatorProvider } from './state';
 
 @NgModule({
   imports: [
@@ -19,7 +19,7 @@ import { EventsDataService } from './state';
     EventsRoutingModule,
     HttpClientModule,
     environment.production ? [] :
-      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, { apiBase: '' }),
+      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, {apiBase: ''}),
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,
@@ -33,7 +33,8 @@ import { EventsDataService } from './state';
     ListComponent
   ],
   providers: [
-    EventsDataService
+    EventsDataService,
+    eventsPaginatorProvider
   ]
 })
 export class EventsModule {
