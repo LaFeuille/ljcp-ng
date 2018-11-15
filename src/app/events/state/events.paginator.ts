@@ -5,7 +5,7 @@ import { EventsQuery } from './events.query';
 
 export const EVENTS_PAGINATOR = new InjectionToken('EVENTS_PAGINATOR');
 ​
-function eventsPaginatorFactory(eventsQuery: EventsQuery) {
+export function eventsPaginatorFactory(eventsQuery: EventsQuery) {
   return new PaginatorPlugin<Event>(eventsQuery).withControls().withRange();
 }
 ​
