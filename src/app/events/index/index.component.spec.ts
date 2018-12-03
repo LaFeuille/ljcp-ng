@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatCardModule, MatProgressBarModule } from '@angular/material';
 import { SharedModule } from '../../shared/shared.module';
 import { ListComponent } from '../list/list.component';
-import { EventsDataService } from '../state';
+import { EventsDataService, eventsPaginatorProvider } from '../state';
 
 import { IndexComponent } from './index.component';
 
@@ -24,7 +24,8 @@ describe('IndexComponent', () => {
         SharedModule
       ],
       providers: [
-        EventsDataService
+        EventsDataService,
+        eventsPaginatorProvider
       ]
     }).compileComponents();
   }));

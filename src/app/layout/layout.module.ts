@@ -1,21 +1,24 @@
 import { NgModule } from '@angular/core';
-import { MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
 import { SharedModule } from '../shared/shared.module';
-
-import { LayoutRoutingModule } from './layout-routing.module';
 import { LayoutComponent } from './layout/layout.component';
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { NavComponent } from './nav/nav.component';
 
 @NgModule({
   imports: [
     SharedModule,
-    LayoutRoutingModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatIconModule,
+    MatListModule
+  ],
+  exports: [
+    LayoutComponent
   ],
   declarations: [
     LayoutComponent,
-    ToolbarComponent
+    NavComponent
   ]
 })
 export class LayoutModule {
