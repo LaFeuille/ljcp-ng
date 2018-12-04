@@ -7,6 +7,9 @@ describe('EventsDataService', () => {
   beforeEach(() => TestBed.configureTestingModule({
     imports: [
       HttpClientTestingModule
+    ],
+    providers: [
+      EventsDataService
     ]
   }));
 

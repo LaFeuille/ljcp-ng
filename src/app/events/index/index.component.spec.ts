@@ -1,6 +1,6 @@
 import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatCardModule, MatProgressBarModule } from '@angular/material';
+import { MatCardModule, MatProgressBarModule, MatSnackBarModule } from '@angular/material';
 import { SharedModule } from '../../shared/shared.module';
 import { ListComponent } from '../list/list.component';
 import { EventsDataService, eventsPaginatorProvider } from '../state';
@@ -21,6 +21,7 @@ describe('IndexComponent', () => {
         HttpClientTestingModule,
         MatCardModule,
         MatProgressBarModule,
+        MatSnackBarModule,
         SharedModule
       ],
       providers: [

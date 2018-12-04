@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
-import { Observable } from 'rxjs';
-import { Subscription } from 'rxjs/internal/Subscription';
+import { Observable, Subscription } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
 import { ConfigService } from '../core/config.service';
 import { AuthStore } from './auth-store.service';
