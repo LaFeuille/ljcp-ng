@@ -2,7 +2,9 @@ import { Injectable } from '@angular/core';
 import { EventsDataService } from './events-data.service';
 import { EventsStore } from './events.store';
 
-@Injectable({providedIn: 'root'})
+@Injectable({
+  providedIn: 'root'
+})
 export class EventsService {
 
   constructor(private store: EventsStore,

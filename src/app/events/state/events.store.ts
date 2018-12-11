@@ -5,7 +5,9 @@ import { Event } from './event.model';
 export interface EventsState extends EntityState<Event> {
 }
 
-@Injectable({providedIn: 'root'})
+@Injectable({
+  providedIn: 'root'
+})
 @StoreConfig({name: 'events'})
 export class EventsStore extends EntityStore<EventsState, Event> {
 

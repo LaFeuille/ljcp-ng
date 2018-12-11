@@ -14,7 +14,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { CoreModule } from './core/core.module';
-import { LayoutModule } from './layout/layout.module';
+import { NavModule } from './nav/nav.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +32,7 @@ import { LayoutModule } from './layout/layout.module';
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AuthModule.forRoot(),
     CoreModule.forRoot(),
-    LayoutModule,
+    NavModule,
     AppRoutingModule
   ],
   providers: [],
