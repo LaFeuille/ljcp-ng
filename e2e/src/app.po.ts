@@ -6,6 +6,6 @@ export class AppPage {
   }
 
   getTitle() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('app-root #appTitle')).getText();
   }
 }
