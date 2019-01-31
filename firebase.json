@@ -3,6 +3,17 @@
     {
       "target": "en",
       "public": "dist/ljcp-ng",
+      "headers": [
+        {
+          "source": "*",
+          "headers": [
+            {
+              "key": "Referrer-Policy",
+              "value": "origin-when-cross-origin"
+            }
+          ]
+        }
+      ],
       "ignore": [
         "firebase.json",
         "**/.*",
