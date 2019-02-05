@@ -3,7 +3,6 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule, MatInputModule } from '@angular/material';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { EventsService } from '../events.service';
 
 import { CreateComponent } from './create.component';
 
@@ -20,8 +19,7 @@ describe('CreateComponent', () => {
         MatInputModule,
         NoopAnimationsModule,
         ReactiveFormsModule
-      ],
-      providers: [EventsService]
+      ]
     })
       .compileComponents();
   }));

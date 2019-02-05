@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/LaFeuille/ljcp-api.svg?branch=develop)](https://travis-ci.org/LaFeuille/ljcp-api)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.0.
 
 ## Development server
 

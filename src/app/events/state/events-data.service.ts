@@ -1,14 +1,15 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-
 import { Observable } from 'rxjs';
 import { flatMap, map } from 'rxjs/operators';
-import { ConfigService } from '../core/config.service';
-import { Page } from '../shared/page';
-import { Event } from './event';
+import { ConfigService } from '../../core/config.service';
+import { createPage, Page } from '../../shared';
+import { Event } from './event.model';
 
-@Injectable()
-export class EventsService {
+@Injectable({
+  providedIn: 'root'
+})
+export class EventsDataService {
 
   constructor(private config: ConfigService, private http: HttpClient) {
   }
@@ -21,9 +22,13 @@ export class EventsService {
 
   findAll(): Observable<Page<Event>> {
     return this.config.data.pipe(
-      flatMap(config => this.http.get(`${config.apiEndpoint}/events`)),
-      map(res => new Page<any>((res as any)._embedded.events))
+      flatMap(config => this.http.get<any>(`${config.apiEndpoint}/events`)),
+      map(res => createPage<Event>({
+        perPage: res.page.size,
+        lastPage: res.page.totalPages,
+        currentPage: res.page.number + 1,
+        data: res._embedded.events
+      }))
     );
   }
-
 }

@@ -1,1 +1,2 @@
-<app-events-list [events]="events$ | async"></app-events-list>
+<mat-progress-bar [mode]="(paginator.isLoading$ | async) ? 'indeterminate' : 'determinate'"></mat-progress-bar>
+<app-events-list [events]="pagination$ | async"></app-events-list>
