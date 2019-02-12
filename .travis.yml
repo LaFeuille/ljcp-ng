@@ -2,3 +2,5 @@ language: node_js
 sudo: required
 addons:
   chrome: stable
+script:
+  - "npm test -- --watch false --browsers ChromeHeadless"

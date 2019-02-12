@@ -26,18 +26,6 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome'],
-    singleRun: false,
-    customLaunchers: {
-      Chrome_Travis_CI: {
-        base: 'ChromeHeadless',
-        flags: ['--no-sandbox']
-      }
-    }
+    singleRun: false
   });
-  if (process.env.TRAVIS) {
-    config.set({
-      browsers: ['Chrome_Travis_CI'],
-      singleRun: true
-    });
-  }
 };
