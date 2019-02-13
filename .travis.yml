@@ -3,4 +3,6 @@ sudo: required
 addons:
   chrome: stable
 script:
+  - "npm run lint"
   - "npm test -- --watch false --browsers ChromeHeadless"
+  - "npm run build -- --prod"
