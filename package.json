@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "bundlesize": [
     {
-      "path": "./dist/*.js",
-      "maxSize": "10 kB"
+      "path": "./dist/lcjp-ng/*.js",
+      "maxSize": "200 kB"
     }
   ],
   "scripts": {
