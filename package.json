@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "bundlesize": [
     {
-      "path": "./dist/lcjp-ng/*.js",
+      "path": "./dist/ljcp-ng/*.js",
       "maxSize": "200 kB"
     }
   ],
