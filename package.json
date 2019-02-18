@@ -1,6 +1,12 @@
 {
   "name": "ljcp-ng",
   "version": "0.0.0",
+  "bundlesize": [
+    {
+      "path": "./dist/*.js",
+      "maxSize": "10 kB"
+    }
+  ],
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
