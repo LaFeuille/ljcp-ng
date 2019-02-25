@@ -19,8 +19,8 @@ import { EventsDataService, eventsPaginatorProvider } from './state';
     CommonModule,
     EventsRoutingModule,
     HttpClientModule,
-    environment.production ? [] :
-      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, {apiBase: ''}),
+    environment.inMemory ?
+      HttpClientInMemoryWebApiModule.forFeature(EventsInMemoryDbService, {apiBase: ''}) : [],
     MatCardModule,
     MatFormFieldModule,
     MatInputModule,

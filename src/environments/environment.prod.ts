@@ -1,4 +1,5 @@
 export const environment = {
   production: true,
-  configFile: 'environment.json'
+  configFile: 'environment.json',
+  inMemory: false
 };

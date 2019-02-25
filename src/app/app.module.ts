@@ -26,8 +26,8 @@ import { NavModule } from './nav/nav.module';
     BrowserModule,
     FormsModule,
     HttpClientModule,
-    environment.production ? [] :
-      HttpClientInMemoryWebApiModule.forRoot(AppInMemoryDbService),
+    environment.inMemory ?
+      HttpClientInMemoryWebApiModule.forRoot(AppInMemoryDbService) : [],
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     AuthModule.forRoot(),
