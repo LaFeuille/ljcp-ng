@@ -2,16 +2,15 @@ import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../state/auth.service';
 
 @Component({
-  templateUrl: './callback.component.html',
-  styleUrls: ['./callback.component.scss']
+  template: ''
 })
-export class CallbackComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   constructor(private auth: AuthService) {
   }
 
   ngOnInit() {
-    this.auth.handleAuthentication();
+    this.auth.login();
   }
 
 }

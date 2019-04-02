@@ -1,31 +1,33 @@
 import { CommonModule } from '@angular/common';
-import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ModuleWithProviders, NgModule } from '@angular/core';
+import { JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { CallbackComponent } from './callback/callback.component';
-import { UnauthorizedInterceptor } from './unauthorized-interceptor.service';
+import { LoginComponent } from './login/login.component';
+import { AuthQuery, jwtOptionsFactory } from './state';
 
 @NgModule({
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    JwtModule.forRoot({
+      jwtOptionsProvider: {
+        provide: JWT_OPTIONS,
+        useFactory: jwtOptionsFactory,
+        deps: [AuthQuery]
+      }
+    })
   ],
   declarations: [
-    CallbackComponent
+    CallbackComponent,
+    LoginComponent
   ]
 })
 export class AuthModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: AuthModule,
-      providers: [
-        {
-          provide: HTTP_INTERCEPTORS,
-          useClass: UnauthorizedInterceptor,
-          multi: true
-        }
-      ]
+      ngModule: AuthModule
     };
   }
 }
