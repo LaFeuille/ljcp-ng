@@ -16,9 +16,7 @@ export function jwtOptionsFactory(auth: AuthQuery) {
   };
 }
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthService {
 
   private auth0: Observable<auth0.WebAuth>;

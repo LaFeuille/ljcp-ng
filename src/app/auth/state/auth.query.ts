@@ -3,9 +3,7 @@ import { Query } from '@datorama/akita';
 import { AuthState } from './auth.model';
 import { AuthStore } from './auth.store';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class AuthQuery extends Query<AuthState> {
 
   accessToken$ = this.select('accessToken');

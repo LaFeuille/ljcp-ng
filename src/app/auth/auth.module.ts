@@ -3,9 +3,10 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { JWT_OPTIONS, JwtModule } from '@auth0/angular-jwt';
 
 import { AuthRoutingModule } from './auth-routing.module';
+import { AuthGuard } from './auth.guard';
 import { CallbackComponent } from './callback/callback.component';
 import { LoginComponent } from './login/login.component';
-import { AuthQuery, jwtOptionsFactory } from './state';
+import { AuthQuery, AuthService, AuthStore, jwtOptionsFactory } from './state';
 
 @NgModule({
   imports: [
@@ -27,7 +28,13 @@ import { AuthQuery, jwtOptionsFactory } from './state';
 export class AuthModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: AuthModule
+      ngModule: AuthModule,
+      providers: [
+        AuthGuard,
+        AuthQuery,
+        AuthService,
+        AuthStore
+      ]
     };
   }
 }
