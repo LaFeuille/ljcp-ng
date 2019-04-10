@@ -18,8 +18,4 @@ export class AuthQuery extends Query<AuthState> {
     super(store);
   }
 
-  get accessToken() {
-    return this.getValue().accessToken;
-  }
-
 }

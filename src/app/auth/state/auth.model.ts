@@ -23,7 +23,7 @@ export function createInitialState(): AuthState {
 export function createState(result: AuthResult): AuthState {
   return {
     accessToken: result.accessToken,
-    expiresAt: moment().add(result.expiresIn, 'milliseconds').toDate().getTime(),
+    expiresAt: moment().add(result.expiresIn, 'seconds').toDate().getTime(),
     idToken: result.idToken
   };
 }

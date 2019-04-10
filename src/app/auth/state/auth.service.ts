@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import * as auth0 from 'auth0-js';
 import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { map, shareReplay, take } from 'rxjs/operators';
 import { ConfigService } from '../../core/config.service';
 import { AuthResult } from './auth.model';
 import { AuthQuery } from './auth.query';
@@ -11,7 +11,7 @@ import { AuthStore } from './auth.store';
 export function jwtOptionsFactory(auth: AuthQuery) {
   return {
     tokenGetter: () => {
-      return auth.accessToken;
+      return auth.accessToken$.pipe(take(1)).toPromise();
     }
   };
 }
