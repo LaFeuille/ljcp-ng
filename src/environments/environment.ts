@@ -5,6 +5,7 @@
 export const environment = {
   production: false,
   configFile: 'environment.dev.json',
+  auth: 'none',
   inMemory: true
 };
 
