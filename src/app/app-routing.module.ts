@@ -5,7 +5,7 @@ import { environment } from '../environments/environment';
 const routes: Routes = [
   {
     path: 'events',
-    loadChildren: './events/events.module#EventsModule'
+    loadChildren: () => import('./events/events.module').then(m => m.EventsModule)
   },
   {
     path: '',

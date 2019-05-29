@@ -1,6 +1,12 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { AuthService } from '../state';
 
 import { LoginComponent } from './login.component';
+
+class MockAuthService {
+  login() {
+  }
+}
 
 describe('LoginComponent', () => {
   let component: LoginComponent;
@@ -8,9 +14,12 @@ describe('LoginComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LoginComponent ]
+      declarations: [LoginComponent],
+      providers: [
+        {provide: AuthService, useClass: MockAuthService}
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
