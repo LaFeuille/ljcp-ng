@@ -1,4 +1,5 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Type } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import { ConfigService } from './config.service';
@@ -9,10 +10,10 @@ describe('ConfigService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [ConfigService]
+      imports: [ HttpClientTestingModule ],
+      providers: [ ConfigService ]
     });
-    http = TestBed.get(HttpTestingController);
+    http = TestBed.get(HttpTestingController as Type<HttpTestingController>);
   });
 
   it('should equal base config if no override', (done: DoneFn) => {
