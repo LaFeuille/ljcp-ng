@@ -25,7 +25,7 @@
     "@angular/router": "~8.0.0",
     "@angular/service-worker": "~8.0.0",
     "@auth0/angular-jwt": "~2.1.0",
-    "@datorama/akita": "~3.15.0",
+    "@datorama/akita": "~3.16.0",
     "angular-in-memory-web-api": "~0.8.0",
     "auth0-js": "~9.10.0",
     "core-js": "^2.5.4",
