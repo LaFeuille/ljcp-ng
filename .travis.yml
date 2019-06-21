@@ -6,6 +6,6 @@ addons:
     organization: "lafeuille"
 script:
   - "npm run lint"
-  - "npm test -- --watch false --browsers ChromeHeadless"
+  - "npm test -- --watch false --browsers ChromeHeadless --codeCoverage true"
   - "npm run build -- --prod"
-  - "npx sonarqube-scanner -Dsonar.sources=src"
+  - sonar-scanner
