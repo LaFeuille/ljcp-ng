@@ -1,4 +1,5 @@
 import * as moment from 'moment';
+import { Moment } from 'moment';
 
 export interface AuthResult {
   accessToken: string;
@@ -20,10 +21,10 @@ export function createInitialState(): AuthState {
   };
 }
 
-export function createState(result: AuthResult): AuthState {
+export function createState(result: AuthResult, now: Moment = moment()): AuthState {
   return {
     accessToken: result.accessToken,
-    expiresAt: moment().add(result.expiresIn, 'seconds').toDate().getTime(),
+    expiresAt: now.add(result.expiresIn, 'seconds').toDate().getTime(),
     idToken: result.idToken
   };
 }
