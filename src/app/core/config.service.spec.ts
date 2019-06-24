@@ -1,4 +1,5 @@
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { Type } from '@angular/core';
 import { TestBed } from '@angular/core/testing';
 
 import { ConfigService } from './config.service';
@@ -12,16 +13,19 @@ describe('ConfigService', () => {
       imports: [HttpClientTestingModule],
       providers: [ConfigService]
     });
-    http = TestBed.get(HttpTestingController);
+    http = TestBed.get(HttpTestingController as Type<HttpTestingController>);
   });
+
+  const expectResults = (config, done: DoneFn, {apiEndpoint, authCallbackUrl}) => {
+    expect(config.apiEndpoint).toEqual(apiEndpoint);
+    expect(config.authCallbackUrl).toEqual(authCallbackUrl);
+    done();
+  };
 
   it('should equal base config if no override', (done: DoneFn) => {
     const service = TestBed.get(ConfigService);
-    service.data.subscribe(config => {
-      expect(config.apiEndpoint).toEqual('');
-      expect(config.authCallbackUrl).toEqual('');
-      done();
-    });
+    service.data.subscribe(config => expectResults(config, done, {apiEndpoint: '', authCallbackUrl: ''}));
+
     const req = http.expectOne('./config/environment.dev.json');
     expect(req.request.method).toEqual('GET');
     req.flush({});
@@ -30,11 +34,11 @@ describe('ConfigService', () => {
 
   it('should equal overridden config', (done: DoneFn) => {
     const service = TestBed.get(ConfigService);
-    service.data.subscribe(config => {
-      expect(config.apiEndpoint).toEqual('https://google.com/');
-      expect(config.authCallbackUrl).toEqual('http://localhost:4200/auth/callback');
-      done();
-    });
+    service.data.subscribe(config => expectResults(config, done, {
+      apiEndpoint: 'https://google.com/',
+      authCallbackUrl: 'http://localhost:4200/auth/callback'
+    }));
+
     const req = http.expectOne('./config/environment.dev.json');
     expect(req.request.method).toEqual('GET');
     req.flush({

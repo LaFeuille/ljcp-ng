@@ -1,13 +1,15 @@
-<mat-card *ngFor="let event of events?.content">
-  <mat-card-header>
-    <mat-card-title>
-      {{ event.title }}
-    </mat-card-title>
-    <mat-card-subtitle>
-      {{ event.startDate | momentFormat }}
-    </mat-card-subtitle>
-  </mat-card-header>
-  <mat-card-content>
-    {{ event.description }}
-  </mat-card-content>
-</mat-card>
+<div fxLayout="row wrap">
+  <mat-card *ngFor="let event of events?.data" fxFlex="30">
+    <mat-card-header>
+      <mat-card-title>
+        {{ event.title }}
+      </mat-card-title>
+      <mat-card-subtitle>
+        {{ event.startDate | moment | momentFormat }}
+      </mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+      {{ event.description }}
+    </mat-card-content>
+  </mat-card>
+</div>

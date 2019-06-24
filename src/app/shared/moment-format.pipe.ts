@@ -6,13 +6,8 @@ import * as moment from 'moment';
 })
 export class MomentFormatPipe implements PipeTransform {
 
-  transform(value: string|moment.Moment, args?: any): string {
-    const format = args && args[0] ? args[0] : 'LL';
-    if (typeof value === 'string') {
-      return moment(value).format(format);
-    } else {
-      return value.format(format);
-    }
+  transform(value: moment.Moment, format: string = 'LL'): string {
+    return value.format(format);
   }
 
 }

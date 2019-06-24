@@ -2,3 +2,10 @@ language: node_js
 sudo: required
 addons:
   chrome: stable
+  sonarcloud:
+    organization: "lafeuille"
+script:
+  - "npm run lint"
+  - "npm test -- --watch false --browsers ChromeHeadless --codeCoverage true"
+  - "npm run build -- --prod"
+  - sonar-scanner
