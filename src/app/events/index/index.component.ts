@@ -3,14 +3,14 @@ import { MatSnackBar } from '@angular/material';
 import { PaginationResponse, PaginatorPlugin as Paginator } from '@datorama/akita';
 import { Observable, Subscription } from 'rxjs';
 import { filter, switchMap } from 'rxjs/operators';
-import { Event, EVENTS_PAGINATOR, EventsDataService, EventsQuery } from '../state';
+import { Event, EVENTS_PAGINATOR, EventsDataService, EventsQuery, EventsState } from '../state';
 
 @Component({
   templateUrl: './index.component.html'
 })
 export class IndexComponent implements OnInit, OnDestroy {
 
-  pagination$: Observable<PaginationResponse<Event>>;
+  pagination$: Observable<PaginationResponse<EventsState>>;
 
   private subs: Subscription[] = [];
 
