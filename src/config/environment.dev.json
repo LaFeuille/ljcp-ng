@@ -1,4 +1,4 @@
 {
   "apiEndpoint": "/api",
-  "authCallbackUrl": "http://localhost:4200/auth/callback"
+  "authCallbackUrl": "http://localhost:4200/auth"
 }

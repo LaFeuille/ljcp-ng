@@ -132,6 +132,9 @@
             "devServerTarget": "ljcp-ng:serve"
           },
           "configurations": {
+            "local": {
+              "devServerTarget": "ljcp-ng:serve:local"
+            },
             "production": {
               "devServerTarget": "ljcp-ng:serve:production"
             }

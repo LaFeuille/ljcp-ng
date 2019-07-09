@@ -36,14 +36,14 @@ describe('ConfigService', () => {
     const service = TestBed.get(ConfigService);
     service.data.subscribe(config => expectResults(config, done, {
       apiEndpoint: 'https://google.com/',
-      authCallbackUrl: 'http://localhost:4200/auth/callback'
+      authCallbackUrl: 'http://localhost:4200/auth'
     }));
 
     const req = http.expectOne('./config/environment.dev.json');
     expect(req.request.method).toEqual('GET');
     req.flush({
       apiEndpoint: 'https://google.com/',
-      authCallbackUrl: 'http://localhost:4200/auth/callback'
+      authCallbackUrl: 'http://localhost:4200/auth'
     });
     http.verify();
   });
