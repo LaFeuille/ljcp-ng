@@ -16,7 +16,6 @@
     "@angular/common": "8.1",
     "@angular/compiler": "8.1",
     "@angular/core": "8.1",
-    "@angular/flex-layout": "~8.0.0-beta.25",
     "@angular/forms": "8.1",
     "@angular/material": "8.1",
     "@angular/platform-browser": "8.1",
@@ -34,7 +33,7 @@
     "moment": "2",
     "rxjs": "6.5",
     "tslib": "1",
-    "zone.js": "0.9"
+    "zone.js": "0.10"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.801",
@@ -48,9 +47,9 @@
     "codelyzer": "5",
     "jasmine-core": "3.4",
     "jasmine-spec-reporter": "4.2",
-    "karma": "4.1",
-    "karma-chrome-launcher": "2.2",
-    "karma-coverage-istanbul-reporter": "2.0",
+    "karma": "4.2",
+    "karma-chrome-launcher": "3.0",
+    "karma-coverage-istanbul-reporter": "2.1",
     "karma-jasmine": "2.0",
     "karma-jasmine-html-reporter": "1",
     "protractor": "5.4",
