@@ -11,18 +11,18 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "8.1",
+    "@angular/animations": "8.2",
     "@angular/cdk": "8.1",
-    "@angular/common": "8.1",
-    "@angular/compiler": "8.1",
-    "@angular/core": "8.1",
-    "@angular/forms": "8.1",
+    "@angular/common": "8.2",
+    "@angular/compiler": "8.2",
+    "@angular/core": "8.2",
+    "@angular/forms": "8.2",
     "@angular/material": "8.1",
-    "@angular/platform-browser": "8.1",
-    "@angular/platform-browser-dynamic": "8.1",
-    "@angular/pwa": "0.801",
-    "@angular/router": "8.1",
-    "@angular/service-worker": "8.1",
+    "@angular/platform-browser": "8.2",
+    "@angular/platform-browser-dynamic": "8.2",
+    "@angular/pwa": "0.802",
+    "@angular/router": "8.2",
+    "@angular/service-worker": "8.2",
     "@auth0/angular-jwt": "3",
     "@datorama/akita": "4",
     "angular-in-memory-web-api": "0.8",
@@ -36,10 +36,10 @@
     "zone.js": "0.10"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.801",
-    "@angular/cli": "8.1",
-    "@angular/compiler-cli": "8.1",
-    "@angular/language-service": "8.1",
+    "@angular-devkit/build-angular": "0.802",
+    "@angular/cli": "8.2",
+    "@angular/compiler-cli": "8.2",
+    "@angular/language-service": "8.2",
     "@datorama/akita-ngdevtools": "3",
     "@types/jasmine": "3.3",
     "@types/jasminewd2": "2.0",
@@ -56,6 +56,6 @@
     "ts-node": "7.0",
     "tslint": "5.15",
     "tslint-sonarts": "1.9",
-    "typescript": "3.4"
+    "typescript": "3.5"
   }
 }
