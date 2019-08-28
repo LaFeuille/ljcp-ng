@@ -37,7 +37,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "0.803",
-    "@angular/cli": "8.2",
+    "@angular/cli": "8.3",
     "@angular/compiler-cli": "8.2",
     "@angular/language-service": "8.2",
     "@datorama/akita-ngdevtools": "3",
@@ -47,7 +47,7 @@
     "codelyzer": "5",
     "jasmine-core": "3.4",
     "jasmine-spec-reporter": "4.2",
-    "karma": "4.2",
+    "karma": "4.3",
     "karma-chrome-launcher": "3.1",
     "karma-coverage-istanbul-reporter": "2.1",
     "karma-jasmine": "2.0",
