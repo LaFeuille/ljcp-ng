@@ -1,3 +1,4 @@
+import { JwtHelperService } from '@auth0/angular-jwt';
 import * as moment from 'moment';
 import { Moment } from 'moment';
 
@@ -10,7 +11,18 @@ export interface AuthResult {
 export interface AuthState {
   accessToken: string | null;
   expiresAt: number | null;
-  idToken: string | null;
+  idToken: IdToken | null;
+}
+
+export interface IdToken {
+  family_name?: string;
+  given_name?: string;
+  iss: string;
+  locale?: string;
+  name?: string;
+  nickname?: string;
+  picture?: string;
+  sub: string;
 }
 
 export function createInitialState(): AuthState {
@@ -21,10 +33,10 @@ export function createInitialState(): AuthState {
   };
 }
 
-export function createState(result: AuthResult, now: Moment = moment()): AuthState {
+export function createState(result: AuthResult, helper: JwtHelperService, now: Moment = moment()): AuthState {
   return {
     accessToken: result.accessToken,
     expiresAt: now.add(result.expiresIn, 'seconds').toDate().getTime(),
-    idToken: result.idToken
+    idToken: helper.decodeToken(result.idToken)
   };
 }
