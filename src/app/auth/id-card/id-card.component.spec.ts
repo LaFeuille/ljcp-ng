@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatCardModule } from '@angular/material/card';
 
 import { IdCardComponent } from './id-card.component';
 
@@ -8,9 +9,12 @@ describe('IdCardComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ IdCardComponent ]
+      declarations: [ IdCardComponent ],
+      imports: [
+        MatCardModule
+      ]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
