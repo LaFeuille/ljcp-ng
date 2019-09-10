@@ -6,7 +6,7 @@ describe('Auth Model createInitialState()', () => {
     const state = createInitialState();
     for (const prop in state) {
       if (state.hasOwnProperty(prop)) {
-        expect(state[ prop ]).toBeNull();
+        expect(state[prop]).toBeNull();
       }
     }
   });
@@ -27,8 +27,8 @@ describe('Auth Model createState()', () => {
       locale: 'en_US'
     };
 
-    const helper = jasmine.createSpyObj('helper', [ 'decodeToken' ]);
-    helper.decodeToken.andReturn(idToken);
+    const helper = jasmine.createSpyObj('helper', ['decodeToken']);
+    helper.decodeToken.and.callFake(() => idToken);
 
     const state = createState({
       accessToken: 'abc123',

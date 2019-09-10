@@ -1,4 +1,4 @@
-<mat-card>
+<mat-card *ngIf="idToken">
   <mat-card-header>
     <mat-card-title>
       {{ idToken.name }}
@@ -6,6 +6,9 @@
     <img [alt]="idToken.name" mat-card-avatar [src]="idToken.picture">
   </mat-card-header>
   <mat-card-actions>
-    <button mat-button i18n (click)="onLogOut()">Log Out</button>
+    <button mat-button i18n (click)="onLogOut()">
+      <mat-icon>logout</mat-icon>
+      Log Out
+    </button>
   </mat-card-actions>
 </mat-card>
