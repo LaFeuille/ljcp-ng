@@ -6,7 +6,7 @@ import { AuthQuery } from '../state';
 })
 export class IdComponent {
 
-  constructor(private query: AuthQuery) {
+  constructor(public query: AuthQuery) {
   }
 
 }
