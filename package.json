@@ -45,7 +45,7 @@
     "@types/jasminewd2": "2.0",
     "@types/node": "8.9",
     "codelyzer": "5",
-    "jasmine-core": "3.4",
+    "jasmine-core": "3.5",
     "jasmine-spec-reporter": "4.2",
     "karma": "4.3",
     "karma-chrome-launcher": "3.1",
