@@ -15,7 +15,7 @@ export interface Config {
 export const baseConfig: Config = {
   apiEndpoint: '',
   authCallbackUrl: '',
-  auth0Audience: 'https://lafeuille-ljcp-api.herokuapp.com/',
+  auth0Audience: 'https://api.lafeuille.org/ljcp/',
   auth0ClientId: 'jdwa60UsWy4NYwaKgAnPgHdQVsNrEgO8',
   auth0Domain: 'lafeuille.eu.auth0.com',
 };

@@ -65,6 +65,11 @@
                   "type": "initial",
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ],
               "serviceWorker": true,
@@ -132,6 +137,9 @@
             "devServerTarget": "ljcp-ng:serve"
           },
           "configurations": {
+            "local": {
+              "devServerTarget": "ljcp-ng:serve:local"
+            },
             "production": {
               "devServerTarget": "ljcp-ng:serve:production"
             }

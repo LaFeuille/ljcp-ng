@@ -1,0 +1,32 @@
+<ng-template *ngIf="idToken; then loggedIn; else loggedOut"></ng-template>
+<ng-template #loggedIn>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>
+        {{ idToken.name }}
+      </mat-card-title>
+      <img [alt]="idToken.name" mat-card-avatar [src]="idToken.picture">
+    </mat-card-header>
+    <mat-card-actions>
+      <button mat-button i18n (click)="onLogOut()">
+        <mat-icon>logout</mat-icon>
+        Log Out
+      </button>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+<ng-template #loggedOut>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title i18n>
+        Anonymous
+      </mat-card-title>
+    </mat-card-header>
+    <mat-card-actions>
+      <a mat-button i18n routerLink="/login">
+        Log In
+      </a>
+    </mat-card-actions>
+  </mat-card>
+</ng-template>
+

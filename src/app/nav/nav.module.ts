@@ -2,6 +2,7 @@ import { LayoutModule } from '@angular/cdk/layout';
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { MatButtonModule, MatIconModule, MatListModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { RouterModule } from '@angular/router';
 import { NavComponent } from './nav/nav.component';
 
 @NgModule({
@@ -15,7 +16,8 @@ import { NavComponent } from './nav/nav.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    RouterModule
   ],
   exports: [
     NavComponent
