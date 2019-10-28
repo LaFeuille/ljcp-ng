@@ -1,0 +1,18 @@
+{
+  "targets": {
+    "lafeuille-ljcp": {
+      "hosting": {
+        "ljcp-ng": [
+          "lafeuille-ljcp"
+        ]
+      }
+    },
+    "lafeuille-ljcp-staging": {
+      "hosting": {
+        "ljcp-ng": [
+          "lafeuille-ljcp-staging"
+        ]
+      }
+    }
+  }
+}
