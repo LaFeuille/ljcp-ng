@@ -1,0 +1,19 @@
+{
+  "hosting": [
+    {
+      "target": "ljcp-ng",
+      "public": "dist/ljcp-ng",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ]
+    }
+  ]
+}
