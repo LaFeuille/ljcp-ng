@@ -1,20 +1,20 @@
-import { Component, OnInit } from '@angular/core';
-import { AuthQuery, AuthService } from '../state';
+import { Component } from '@angular/core';
+import { AuthService } from '../auth.service';
 
 @Component({
   templateUrl: './id.component.html'
 })
-export class IdComponent implements OnInit {
+export class IdComponent {
 
-  constructor(public query: AuthQuery, private service: AuthService) {
-    this.service.renewTokens();
+  constructor(public auth: AuthService) {
   }
 
-  ngOnInit(): void {
+  onLogIn() {
+    this.auth.login();
   }
 
   onLogOut() {
-    this.service.logout();
+    this.auth.logout();
   }
 
 }

@@ -1,4 +1,4 @@
-import * as moment from 'moment';
+import moment from 'moment';
 import { MomentFormatPipe } from './moment-format.pipe';
 
 describe('MomentFormatPipe', () => {

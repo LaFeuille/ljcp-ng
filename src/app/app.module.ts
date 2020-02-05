@@ -13,7 +13,6 @@ import { AppInMemoryDbService } from './app-in-memory-db.service';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
-import { CoreModule } from './core/core.module';
 import { NavModule } from './nav/nav.module';
 
 @NgModule({
@@ -31,7 +30,6 @@ import { NavModule } from './nav/nav.module';
     ServiceWorkerModule.register('ngsw-worker.js', {enabled: environment.production}),
     environment.production ? [] : AkitaNgDevtools.forRoot(),
     environment.auth === 'auth0' ? AuthModule.forRoot() : [],
-    CoreModule.forRoot(),
     NavModule,
     AppRoutingModule
   ],

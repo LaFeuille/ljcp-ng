@@ -3,10 +3,6 @@ import { inject, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { AuthGuard } from './auth.guard';
-import { AuthQuery } from './state';
-
-class MockAuthQuery {
-}
 
 describe('AuthGuard', () => {
   beforeEach(() => {
@@ -16,8 +12,7 @@ describe('AuthGuard', () => {
         RouterTestingModule
       ],
       providers: [
-        AuthGuard,
-        {provide: AuthQuery, useClass: MockAuthQuery}
+        AuthGuard
       ]
     });
   });

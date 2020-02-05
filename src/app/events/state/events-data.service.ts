@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { flatMap, map } from 'rxjs/operators';
-import { ConfigService } from '../../core/config.service';
+import { map } from 'rxjs/operators';
+import { environment } from '../../../environments/environment';
 import { createPage, Page } from '../../shared';
 import { Event } from './event.model';
 
@@ -11,18 +11,15 @@ import { Event } from './event.model';
 })
 export class EventsDataService {
 
-  constructor(private config: ConfigService, private http: HttpClient) {
+  constructor(private http: HttpClient) {
   }
 
   create(request: any): Promise<any> {
-    return this.config.data.pipe(
-      flatMap(config => this.http.post(`${config.apiEndpoint}/events`, request))
-    ).toPromise();
+    return this.http.post(`${environment.apiEndpoint}/events`, request).toPromise();
   }
 
   findAll(): Observable<Page<Event>> {
-    return this.config.data.pipe(
-      flatMap(config => this.http.get<any>(`${config.apiEndpoint}/events`)),
+    return this.http.get<any>(`${environment.apiEndpoint}/events`).pipe(
       map(res => createPage<Event>({
         perPage: res.page.size,
         lastPage: res.page.totalPages,

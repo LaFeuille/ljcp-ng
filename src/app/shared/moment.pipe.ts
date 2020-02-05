@@ -1,6 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import * as moment from 'moment';
-import { Moment, MomentFormatSpecification } from 'moment';
+import moment, { Moment, MomentFormatSpecification } from 'moment';
 
 @Pipe({
   name: 'moment'

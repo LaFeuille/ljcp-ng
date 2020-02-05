@@ -4,8 +4,13 @@
 
 export const environment = {
   production: false,
-  configFile: 'environment.dev.json',
+  apiEndpoint: '/api',
   auth: 'none',
+  auth0: {
+    domain: undefined,
+    clientId: undefined,
+    audience: undefined
+  },
   inMemory: true
 };
 

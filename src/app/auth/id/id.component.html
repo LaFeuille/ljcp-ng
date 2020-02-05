@@ -1,1 +1,4 @@
-<app-id-card [idToken]="(query.idToken$ | async)" (logOut)="onLogOut()"></app-id-card>
+<app-id-card [idToken]="(auth.getUser$() | async)"
+             (logIn)="onLogIn()"
+             (logOut)="onLogOut()">
+</app-id-card>

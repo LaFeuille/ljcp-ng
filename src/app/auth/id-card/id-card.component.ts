@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { IdToken } from '../state';
 
 @Component({
   selector: 'app-id-card',
@@ -12,7 +11,14 @@ export class IdCardComponent {
   idToken: IdToken;
 
   @Output()
+  logIn = new EventEmitter<void>();
+
+  @Output()
   logOut = new EventEmitter<void>();
+
+  onLogIn() {
+    this.logIn.emit();
+  }
 
   onLogOut() {
     this.logOut.emit();
