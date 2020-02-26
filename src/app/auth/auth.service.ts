@@ -18,7 +18,7 @@ export class AuthService {
       audience: environment.auth0.audience,
       redirect_uri: `${window.location.origin}`
     })
-  ) as Observable<Auth0Client>).pipe(
+  )).pipe(
     shareReplay(1), // Every subscription receives the same shared value
     catchError(err => throwError(err))
   );

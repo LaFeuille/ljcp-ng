@@ -1,5 +1,5 @@
 import { Component, Inject, OnDestroy, OnInit } from '@angular/core';
-import { MatSnackBar } from '@angular/material';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { PaginationResponse, PaginatorPlugin as Paginator } from '@datorama/akita';
 import { Observable, Subscription } from 'rxjs';
 import { filter, switchMap } from 'rxjs/operators';

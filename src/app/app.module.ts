@@ -7,7 +7,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { AkitaNgDevtools } from '@datorama/akita-ngdevtools';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import 'hammerjs';
 import { environment } from '../environments/environment';
 import { AppInMemoryDbService } from './app-in-memory-db.service';
 import { AppRoutingModule } from './app-routing.module';

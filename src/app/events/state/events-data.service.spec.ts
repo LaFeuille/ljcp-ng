@@ -14,7 +14,7 @@ describe('EventsDataService', () => {
   }));
 
   it('should be created', () => {
-    const service: EventsDataService = TestBed.get(EventsDataService);
+    const service: EventsDataService = TestBed.inject(EventsDataService);
     expect(service).toBeTruthy();
   });
 });
