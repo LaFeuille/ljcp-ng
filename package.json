@@ -27,7 +27,7 @@
     "@auth0/auth0-spa-js": "1.6",
     "@datorama/akita": "4",
     "angular-in-memory-web-api": "0.9",
-    "auth0-js": "9.12",
+    "auth0-js": "9.13",
     "faker": "4.1",
     "firebase": "7",
     "moment": "2",
